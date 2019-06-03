@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
  typedef struct node{
 	 int vertexNumber;
 	 struct node* next;
@@ -10,7 +11,9 @@
 	 int e;
 	 list* array;
  }graph;
+
 int visited[8]; int parent[8];
+
  graph* arrayList(){
 	 int i,x,y;
 	 list* temp;
@@ -55,6 +58,7 @@ int visited[8]; int parent[8];
         printf("\n");
     }
 }
+
 void DFS(graph* g, int u){ list* temp=g->array[u].next;
 	visited[u]=1; printf("\n%d",u);
 	while(temp){if(visited[temp->vertexNumber]== 0){ parent[u]= temp->vertexNumber;
@@ -63,6 +67,7 @@ void DFS(graph* g, int u){ list* temp=g->array[u].next;
 	temp=temp->next;}
 	
 }
+
 void DFStraversal(graph* g,int startpoint){int i;
 	for(i=0;i<g->v;i++){visited[i]=0; parent[i]= 0;}
 	//for(i=0;i<g->v;i++){
@@ -70,7 +75,8 @@ void DFStraversal(graph* g,int startpoint){int i;
 			DFS(g,startpoint);
 	
 }
- int main(){ int i=0;
+
+int main(){ int i=0;
 	 graph* g=arrayList();
 	 printGraph(g);for(i=0;i<g->v;i++) printf("\n%d is a parent of %d",i,parent[i]);
   DFStraversal(g,0);	 
