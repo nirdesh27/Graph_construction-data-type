@@ -1,3 +1,13 @@
+ 
+ 
+/**
+Copyright All Rights Reserved by Nirdesh Kumar
+Project : Defining graph ADT
+Authors: Nirdesh Kumar 
+Purpose: Build and graph ADT For  knowledge point of view using adjacency Matrix
+*/
+
+
 #include<stdio.h>
 #include<stdlib.h>
 typedef struct graph{
