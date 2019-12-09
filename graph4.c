@@ -1,3 +1,12 @@
+ 
+ 
+/**
+Copyright All Rights Reserved by Nirdesh Kumar
+Project : Graph construction
+Authors: Nirdesh Kumar 
+Purpose: Build graph ADT in ajacency list (correction to narshimha kurumachi book)
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
  typedef struct node{
